@@ -1,3 +1,3 @@
 # Pizzacon
 
-This is am Angular webapp demo project developed by Jared Hettinger.
+This is an Angular webapp demo project developed by Jared Hettinger.
