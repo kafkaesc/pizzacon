@@ -1,0 +1,24 @@
+<div class="container m-h-lg">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>{{ panel?.name }}</h1>
+            <p class="blurb">{{ panel?.blurb }}</p>
+        </div>
+    </div>
+    <div *ngIf="panel?.imageUrl" class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img [src]="panel?.imageUrl" class="panel-img m-b-sm" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <p>{{ panel?.abstract }}</p>
+            <p><strong>Date: </strong> {{ panel?.date }}</p>
+            <p><strong>Time: </strong> {{ panel?.time }}</p>
+            <p><strong>Location: </strong> {{ panel?.location }}</p>
+        </div>
+    </div>
+</div>

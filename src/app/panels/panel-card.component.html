@@ -1,0 +1,16 @@
+<div [routerLink]="['/panels', panel.id]">
+    <div class="media m-b-md cur-pntr">
+        <div class="media-left m-r-sm">
+            <img *ngIf="panel?.imageUrl" [src]="panel?.imageUrl" class="media-object panel-img" />
+            <img
+                *ngIf="!panel.imageUrl"
+                src="/assets/images/default-panel-image.png"
+                class="media-object panel-img"
+            />
+        </div>
+        <div class="media-body p-h-sm">
+            <h4 class="media-heading">{{ panel.name }}</h4>
+            <p class="blurb">{{ panel.blurb }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="m-lg">
+    <h1>Pizzacon Pizza Panels</h1>
+    <hr />
+    <div class="row">
+        <div *ngFor="let pan of panels" class="col-md-5">
+            <panel-card [panel]="pan"></panel-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+h4 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.blurb {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.media {
+    background-color: #ecf0f1;
+}
+
+.media:hover {
+    background-color: #dceaed;
+}
+
+.panel-img {
+    max-height: 100px;
+}
+
