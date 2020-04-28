@@ -1,3 +1,4 @@
+export * from './create-panel.component'
 export * from './panel-card.component'
 export * from './panel-details.component'
 export * from './panel-list.component'

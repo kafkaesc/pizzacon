@@ -18,7 +18,7 @@
             <p>{{ panel?.abstract }}</p>
             <p><strong>Date: </strong> {{ panel?.date }}</p>
             <p><strong>Time: </strong> {{ panel?.time }}</p>
-            <p><strong>Location: </strong> {{ panel?.location }}</p>
+            <p *ngIf="panel?.location"><strong>Location: </strong> {{ panel?.location }}</p>
         </div>
     </div>
 </div>

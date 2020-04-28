@@ -1,0 +1,195 @@
+<div class="container m-h-lg">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>Create a New Panel</h1>
+        </div>
+    </div>
+    <form
+        #newPanelForm="ngForm"
+        (ngSubmit)="saveNewPanel(newPanelForm.value)"
+        autocomplete="off"
+        novalidate
+    >
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <label for="name" class="m-b-xs">Name</label>
+                <em
+                    *ngIf="
+                        newPanelForm.controls.name?.invalid &&
+                        newPanelForm.controls.name?.touched &&
+                        newPanelForm.controls.name?.errors.required
+                    "
+                    class="err"
+                >
+                    Required
+                </em>
+                <input
+                    id="name"
+                    name="name"
+                    (ngModel)="(newPanel.name)"
+                    maxlength="50"
+                    required
+                    type="text"
+                    class="form-control m-b-sm"
+                    [ngClass]="{
+                        'is-invalid':
+                            newPanelForm.controls.name?.invalid &&
+                            newPanelForm.controls.name?.touched
+                    }"
+                    placeholder="Name the panel..."
+                />
+                <label for="blurb" class="m-b-xs">Blurb</label>
+                <em
+                    *ngIf="
+                        newPanelForm.controls.blurb?.invalid &&
+                        newPanelForm.controls.blurb?.touched &&
+                        newPanelForm.controls.blurb?.errors.required
+                    "
+                    class="err"
+                >
+                    Required
+                </em>
+                <input
+                    id="blurb"
+                    name="blurb"
+                    (ngModel)="(newPanel.blurb)"
+                    maxlength="100"
+                    required
+                    type="text"
+                    class="form-control m-b-sm"
+                    [ngClass]="{
+                        'is-invalid':
+                            newPanelForm.controls.blurb?.invalid &&
+                            newPanelForm.controls.blurb?.touched
+                    }"
+                    placeholder="Enter a short blurb..."
+                />
+                <label for="abstract" class="m-b-xs">Abstract</label>
+                <em
+                    *ngIf="
+                        newPanelForm.controls.abstract?.invalid &&
+                        newPanelForm.controls.abstract?.touched &&
+                        newPanelForm.controls.abstract?.errors.required
+                    "
+                    class="err"
+                >
+                    Required
+                </em>
+                <textarea
+                    id="abstract"
+                    name="abstract"
+                    (ngModel)="(newPanel.abstract)"
+                    maxlength="280"
+                    required
+                    class="form-control m-b-sm"
+                    [ngClass]="{
+                        'is-invalid':
+                            newPanelForm.controls.abstract?.invalid &&
+                            newPanelForm.controls.abstract?.touched
+                    }"
+                    placeholder="Give a few-sentence summary of the panel's topic..."
+                ></textarea>
+                <label for="date" class="m-b-xs">Date</label>
+                <em
+                    *ngIf="
+                        newPanelForm.controls.date?.invalid &&
+                        newPanelForm.controls.date?.touched &&
+                        newPanelForm.controls.date?.errors.required
+                    "
+                    class="err"
+                >
+                    Required
+                </em>
+                <input
+                    id="date"
+                    name="date"
+                    (ngModel)="(newPanel.date)"
+                    maxlength="10"
+                    required
+                    type="text"
+                    class="form-control m-b-sm"
+                    [ngClass]="{
+                        'is-invalid':
+                            newPanelForm.controls.date?.invalid &&
+                            newPanelForm.controls.date?.touched
+                    }"
+                    placeholder="Enter a date..."
+                />
+                <label for="time" class="m-b-xs">Time</label>
+                <em
+                    *ngIf="
+                        newPanelForm.controls.time?.invalid &&
+                        newPanelForm.controls.time?.touched &&
+                        newPanelForm.controls.time?.errors.required
+                    "
+                    class="err"
+                >
+                    Required
+                </em>
+                <input
+                    id="time"
+                    name="time"
+                    (ngModel)="(newPanel.time)"
+                    maxlength="8"
+                    required
+                    type="text"
+                    class="form-control m-b-sm"
+                    [ngClass]="{
+                        'is-invalid':
+                            newPanelForm.controls.time?.invalid &&
+                            newPanelForm.controls.time?.touched
+                    }"
+                    placeholder="Enter a time..."
+                />
+                <label for="location" class="m-b-xs">Location</label>
+                <input
+                    id="location"
+                    name="location"
+                    (ngModel)="(newPanel.location)"
+                    maxlength="50"
+                    type="text"
+                    class="form-control m-b-sm"
+                    placeholder="Enter the location..."
+                />
+                <label for="onlineUrl" class="m-b-xs">Online URL</label>
+                <input
+                    id="onlineUrl"
+                    name="onlineUrl"
+                    (ngModel)="(newPanel.onlineUrl)"
+                    maxlength="240"
+                    type="text"
+                    class="form-control m-b-sm"
+                    placeholder="Enter an online URL (if applicable)"
+                />
+                <label for="imageUrl" class="m-b-xs">Image URL</label>
+                <input
+                    id="imageUrl"
+                    name="imageUrl"
+                    (ngModel)="(newPanel.imageUrl)"
+                    maxlength="240"
+                    type="text"
+                    class="form-control m-b-sm"
+                    placeholder="Enter an image url..."
+                />
+            </div>
+        </div>
+        <div class="row m-t-sm">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <button
+                    [disabled]="newPanelForm.invalid"
+                    type="submit"
+                    class="btn btn-primary"
+                    [ngClass]="{ 'cur-noal': newPanelForm.invalid }"
+                >
+                    Save
+                </button>
+                <button (click)="cancel()" type="button" class="btn btn-secondary m-l-sm">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

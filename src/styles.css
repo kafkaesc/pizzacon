@@ -1,9 +1,25 @@
+/* Color refs */
+.black {
+    color: #000 !important;
+}
+
+.white {
+    color: #fff !important;
+}
+
 /* Custom text style */
 .big-text {
     font-size: 8rem;
 }
 
-/* Customer cursor styles */
+/* Custom form styles */
+em.err {
+    color: #e74c3c;
+    float: right;
+    margin-left: 5px;
+}
+
+/* Custom cursor styles */
 .cur-std {
     cursor: default !important;
 }

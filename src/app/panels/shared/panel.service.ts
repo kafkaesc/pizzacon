@@ -20,16 +20,12 @@ export class PanelService {
 
     savePanel(panel: IPanel) {
         panel.id = 999
-        if (panel.panelists === null) {
-            panel.panelists = []
-        }
-
+        panel.panelists = []
         PANELS.push(panel)
     }
 
     updatePanel(panel: IPanel) {
         let index = PANELS.findIndex((pa) => pa.id === panel.id)
-
         PANELS[index] = panel
     }
 }

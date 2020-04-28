@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router'
 
@@ -7,6 +8,7 @@ import { NavbarComponent } from './nav/navbar.component'
 import { PizzaconAppComponent } from './pizzacon-app.component'
 
 import {
+    CreatePanelComponent,
     PanelCardComponent,
     PanelDetailsComponent,
     PanelListComponent,
@@ -16,13 +18,15 @@ import {
 
 @NgModule({
     declarations: [
+        CreatePanelComponent,
         NavbarComponent,
         PanelCardComponent,
         PanelDetailsComponent,
         PanelListComponent,
         PizzaconAppComponent
     ],
-    imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+    imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+    exports: [RouterModule],
     providers: [PanelService, PanelListResolver],
     bootstrap: [PizzaconAppComponent]
 })
