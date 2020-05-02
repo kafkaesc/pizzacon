@@ -5,11 +5,20 @@ import { IPanel, IPanelist } from './shared/panel.model'
 import { PanelService } from './shared/panel.service'
 
 @Component({
+    styles: [
+        `
+            @media (min-width: 769px) {
+                .btn-h3 {
+                    float: right;
+                }
+            }
+        `
+    ],
     styleUrls: ['./panel-details.component.css'],
     templateUrl: './panel-details.component.html'
 })
 export class PanelDetailsComponent {
-    addMode: boolean
+    displayMode: string
     panel: IPanel
 
     private activatedRoute: ActivatedRoute
@@ -19,19 +28,19 @@ export class PanelDetailsComponent {
         this.activatedRoute = ar
         this.panelService = ps
 
-        this.addMode = false
+        this.displayMode = 'list'
     }
 
     ngOnInit() {
         this.panel = this.panelService.getPanel(+this.activatedRoute.snapshot.params['id'])
     }
 
-    addModeOn() {
-        this.addMode = true
+    setAddMode() {
+        this.displayMode = 'add'
     }
 
-    addModeOff() {
-        this.addMode = false
+    setListMode() {
+        this.displayMode = 'list'
     }
 
     addPanelist(panelist: IPanelist) {
@@ -43,6 +52,6 @@ export class PanelDetailsComponent {
         panelist.id = MAXID + 1
         this.panel.panelists.push(panelist)
         this.panelService.updatePanel(this.panel)
-        this.addMode = false
+        this.displayMode = 'list'
     }
 }

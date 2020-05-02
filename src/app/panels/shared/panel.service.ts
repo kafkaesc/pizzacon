@@ -43,10 +43,10 @@ const PANELS: IPanel[] = [
         location: 'Room 210',
         onlineUrl: 'string',
         panelists: [
-            { id: 1, firstName: 'Leonardo' },
-            { id: 2, firstName: 'Raphael' },
-            { id: 3, firstName: 'Donatello' },
-            { id: 4, firstName: 'Michelangelo' }
+            { id: 1, firstName: 'Leonardo', imageUrl: '/assets/images/panelists/leonardo.png' },
+            { id: 2, firstName: 'Raphael', imageUrl: '/assets/images/panelists/raphael.png' },
+            { id: 3, firstName: 'Donatello', imageUrl: '/assets/images/panelists/donatello.png' },
+            { id: 4, firstName: 'Michelangelo', imageUrl: '/assets/images/panelists/michelangelo.png' }
         ]
     },
     {

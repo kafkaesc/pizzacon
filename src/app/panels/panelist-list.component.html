@@ -1,0 +1,10 @@
+<div class="row" *ngFor="let pan of panelists">
+    <div class="col-md-12">
+        <div *ngIf="pan.imageUrl">
+            <img [src]="pan.imageUrl" style="width: 64px;" />
+        </div>
+        <p>
+            {{ pan.firstName }} <span *ngIf="pan.lastName">{{ pan.lastName }}</span>
+        </p>
+    </div>
+</div>

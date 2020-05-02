@@ -9,21 +9,25 @@ import { NavbarComponent } from './nav/navbar.component'
 import { PizzaconAppComponent } from './pizzacon-app.component'
 
 import {
+    AddPanelistComponent,
     CreatePanelComponent,
     PanelCardComponent,
     PanelDetailsComponent,
     PanelListComponent,
     PanelListResolver,
-    PanelService
+    PanelService,
+    PanelistListComponent
 } from './panels/index'
 
 @NgModule({
     declarations: [
+        AddPanelistComponent,
         CreatePanelComponent,
         NavbarComponent,
         PanelCardComponent,
         PanelDetailsComponent,
         PanelListComponent,
+        PanelistListComponent,
         PizzaconAppComponent
     ],
     imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],

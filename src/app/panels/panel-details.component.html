@@ -21,4 +21,45 @@
             <p *ngIf="panel?.location"><strong>Location: </strong> {{ panel?.location }}</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            <h3>Panelists</h3>
+        </div>
+        <div class="col-md-3">
+            <button
+                *ngIf="displayMode !== 'add'"
+                (click)="setAddMode()"
+                type="button"
+                class="btn btn-h3 btn-primary"
+            >
+                Add Panelist
+            </button>
+            <button
+                *ngIf="displayMode !== 'list'"
+                (click)="setListMode()"
+                type="button"
+                class="btn btn-h3 btn-secondary"
+            >
+                Cancel
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div *ngIf="displayMode === 'add'">
+                <add-panelist></add-panelist>
+            </div>
+            <div *ngIf="displayMode === 'list'">
+                <panelist-list [panelists]="panel?.panelists"></panelist-list>
+            </div>
+        </div>
+    </div>
 </div>
