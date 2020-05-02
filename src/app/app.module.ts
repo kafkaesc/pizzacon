@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router'
 
 import { appRoutes } from './routes'
+import { AuthService } from './user/auth.service'
 import { NavbarComponent } from './nav/navbar.component'
 import { PizzaconAppComponent } from './pizzacon-app.component'
 
@@ -26,8 +27,7 @@ import {
         PizzaconAppComponent
     ],
     imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
-    exports: [RouterModule],
-    providers: [PanelService, PanelListResolver],
+    providers: [AuthService, PanelService, PanelListResolver],
     bootstrap: [PizzaconAppComponent]
 })
 export class AppModule {}

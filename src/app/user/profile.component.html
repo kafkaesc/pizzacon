@@ -1,3 +1,45 @@
 <div class="m-lg">
-    <h1>Profile Component</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Your Pizzacon Profile</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form
+                [formGroup]="profileForm"
+                (ngSubmit)="saveProfile(profileForm.value)"
+                autocomplete="off"
+                novalidate
+            >
+                <label class="m-b-sm">First Name</label>
+                <input
+                    id="firstName"
+                    formControlName="firstName"
+                    type="text"
+                    class="form-control m-b-md"
+                    placeholder="First name..."
+                />
+                <label class="m-b-sm">Last Name</label>
+                <input
+                    id="lastName"
+                    formControlName="lastName"
+                    type="text"
+                    class="form-control m-b-md"
+                    placeholder="Last name..."
+                />
+                <label class="m-b-sm">Favorite Pizza</label>
+                <input
+                    id="favoritePizza"
+                    formControlName="favoritePizza"
+                    type="text"
+                    class="form-control m-b-md"
+                    placeholder="Your favorite pie..."
+                />
+                <button class="btn btn-primary">Update</button>
+                <button (click)="cancel()" class="btn btn-secondary m-l-sm">Cancel</button>
+            </form>
+        </div>
+    </div>
 </div>
