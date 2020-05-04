@@ -12,6 +12,12 @@ import { PanelService } from './shared/panel.service'
                     float: right;
                 }
             }
+
+            @media (max-width: 769px) {
+                .btn-h3 {
+                    margin-bottom: 5px;
+                }
+            }
         `
     ],
     styleUrls: ['./panel-details.component.css'],

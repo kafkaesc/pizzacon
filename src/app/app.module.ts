@@ -15,6 +15,7 @@ import {
     PanelDetailsComponent,
     PanelListComponent,
     PanelListResolver,
+    PanelistCardComponent,
     PanelService,
     PanelistListComponent
 } from './panels/index'
@@ -27,6 +28,7 @@ import {
         PanelCardComponent,
         PanelDetailsComponent,
         PanelListComponent,
+        PanelistCardComponent,
         PanelistListComponent,
         PizzaconAppComponent
     ],

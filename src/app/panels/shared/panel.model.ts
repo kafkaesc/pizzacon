@@ -16,6 +16,7 @@ export interface IPanelist {
     firstName: string
     lastName?: string
     imageUrl?: string
+    title?: string
     bio?: string
     favoritePizza?: string
 }

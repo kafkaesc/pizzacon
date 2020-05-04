@@ -1,0 +1,30 @@
+h4 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+p.title {
+    font-size: 14px;
+    font-style: italic;
+}
+
+p.bio {
+    font-size: 14px;
+}
+
+.media {
+    background-color: #ecf0f1;
+}
+
+/*
+.media:hover {
+    background-color: #dceaed;
+}
+*/
+
+.panelist-img {
+    max-height: 100px;
+}

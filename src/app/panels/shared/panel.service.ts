@@ -43,10 +43,30 @@ const PANELS: IPanel[] = [
         location: 'Room 210',
         onlineUrl: 'string',
         panelists: [
-            { id: 1, firstName: 'Leonardo', imageUrl: '/assets/images/panelists/leonardo.png' },
-            { id: 2, firstName: 'Raphael', imageUrl: '/assets/images/panelists/raphael.png' },
-            { id: 3, firstName: 'Donatello', imageUrl: '/assets/images/panelists/donatello.png' },
-            { id: 4, firstName: 'Michelangelo', imageUrl: '/assets/images/panelists/michelangelo.png' }
+            {
+                id: 1,
+                firstName: 'Leonardo',
+                imageUrl: '/assets/images/panelists/leonardo.png',
+                title: 'Pizza Philosopher'
+            },
+            {
+                id: 2,
+                firstName: 'Raphael',
+                imageUrl: '/assets/images/panelists/raphael.png',
+                title: 'Pizza Philosopher'
+            },
+            {
+                id: 3,
+                firstName: 'Donatello',
+                imageUrl: '/assets/images/panelists/donatello.png',
+                title: 'Pizza Philosopher'
+            },
+            {
+                id: 4,
+                firstName: 'Michelangelo',
+                imageUrl: '/assets/images/panelists/michelangelo.png',
+                title: 'Pizza Philosopher'
+            }
         ]
     },
     {
@@ -60,7 +80,15 @@ const PANELS: IPanel[] = [
         imageUrl: null,
         location: 'Room 396',
         onlineUrl: 'string',
-        panelists: []
+        panelists: [
+            {
+                id: 5,
+                firstName: 'Julius',
+                lastName: 'Caesar',
+                imageUrl: '/assets/images/panelists/caesar.png',
+                title: 'Pizza Entrepreneur'
+            }
+        ]
     },
     {
         id: 3,

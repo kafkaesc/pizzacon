@@ -1,0 +1,22 @@
+<div class="media m-b-md">
+    <div class="media-left m-r-sm">
+        <img
+            *ngIf="panelist?.imageUrl"
+            [src]="panelist?.imageUrl"
+            class="media-object panelist-img"
+        />
+        <img
+            *ngIf="!panelist.imageUrl"
+            src="/assets/images/default-panel-image.png"
+            class="media-object panelist-img"
+        />
+    </div>
+    <div class="media-body p-sm">
+        <h4 class="media-heading">
+            {{ panelist.firstName }}
+            <span *ngIf="panelist?.lastName">{{ panelist?.lastName }}</span>
+        </h4>
+        <p *ngIf="panelist?.title" class="title">{{ panelist?.title }}</p>
+        <p *ngIf="panelist?.bio" class="bio">{{ panelist?.bio }}</p>
+    </div>
+</div>

@@ -1,10 +1,12 @@
-<div class="row" *ngFor="let pan of panelists">
-    <div class="col-md-12">
-        <div *ngIf="pan.imageUrl">
-            <img [src]="pan.imageUrl" style="width: 64px;" />
+<div>
+    <p *ngIf="panelists.length === 0" class="text-center">
+        There are currently no panelists for this event.
+    </p>
+    <div *ngIf="panelists.length > 0">
+        <div class="row" *ngFor="let pan of panelists">
+            <div class="col-md-12">
+                <panelist-card [panelist]="pan"></panelist-card>
+            </div>
         </div>
-        <p>
-            {{ pan.firstName }} <span *ngIf="pan.lastName">{{ pan.lastName }}</span>
-        </p>
     </div>
 </div>
