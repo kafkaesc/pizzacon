@@ -55,7 +55,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div *ngIf="displayMode === 'add'">
-                <add-panelist></add-panelist>
+                <add-panelist (save)="addPanelist($event)"></add-panelist>
             </div>
             <div *ngIf="displayMode === 'list'">
                 <panelist-list [panelists]="panel?.panelists"></panelist-list>

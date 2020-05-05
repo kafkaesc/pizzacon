@@ -4,6 +4,9 @@ import { IPanel } from './panel.model'
 
 @Injectable()
 export class PanelService {
+    nextPanelId: number = 4
+    nextPanelistId: number = 6
+
     getPanels(): Observable<IPanel[]> {
         let subject = new Subject<IPanel[]>()
         setTimeout(() => {
@@ -12,6 +15,16 @@ export class PanelService {
         }, 100)
 
         return subject
+    }
+
+    getNextPanelId() {
+        this.nextPanelId++
+        return this.nextPanelId - 1
+    }
+
+    getNextPanelistId() {
+        this.nextPanelistId++
+        return this.nextPanelistId - 1
     }
 
     getPanel(id: number): IPanel {

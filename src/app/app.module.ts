@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router'
 
@@ -32,7 +32,7 @@ import {
         PanelistListComponent,
         PizzaconAppComponent
     ],
-    imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+    imports: [BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes)],
     providers: [AuthService, PanelService, PanelListResolver],
     bootstrap: [PizzaconAppComponent]
 })

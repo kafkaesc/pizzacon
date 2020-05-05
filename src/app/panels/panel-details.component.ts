@@ -50,12 +50,7 @@ export class PanelDetailsComponent {
     }
 
     addPanelist(panelist: IPanelist) {
-        const MAXID = Math.max.apply(
-            null,
-            this.panel.panelists.map((pan) => pan.id)
-        )
-
-        panelist.id = MAXID + 1
+        panelist.id = this.panelService.nextPanelistId
         this.panel.panelists.push(panelist)
         this.panelService.updatePanel(this.panel)
         this.displayMode = 'list'
